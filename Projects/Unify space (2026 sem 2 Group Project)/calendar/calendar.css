@@ -1,0 +1,147 @@
+
+/* Calendar folder CSS - connected in index.html */
+.calendar-app {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 14px;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#calendarMonthYear {
+  font-size: 14px;
+  text-align: center;
+  flex: 1;
+}
+
+.calendar-weekdays,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px;
+  width: 100%;
+}
+
+.calendar-weekdays span {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 900;
+  color: #64748b;
+}
+
+.calendar-day {
+  min-height: 34px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  position: relative;
+}
+
+.calendar-day:hover {
+  border-color: #4f46e5;
+}
+
+.calendar-day.selected {
+  background: #4f46e5;
+  color: white;
+}
+
+.calendar-day.today {
+  border-color: #22c55e;
+}
+
+.calendar-day.has-meeting::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #ef4444;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.empty-day {
+  visibility: hidden;
+}
+
+.meeting-form {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.meeting-form input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.meeting-form .btn {
+  width: 100%;
+}
+
+#selectedDateTitle {
+  margin-top: 14px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.meeting-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.meeting-item strong {
+  display: block;
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.meeting-item span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.meeting-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.meeting-actions button {
+  padding: 7px 9px;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.start-meeting-btn {
+  background: #4f46e5;
+  color: white;
+}
+
+.delete-meeting-btn {
+  background: #fee2e2;
+  color: #991b1b;
+}

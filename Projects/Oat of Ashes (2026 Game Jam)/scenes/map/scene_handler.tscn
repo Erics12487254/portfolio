@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cc7n7x7bflvkl"]
+
+[ext_resource type="Script" uid="uid://dy4xhfj4vvdqq" path="res://scenes/map/scene_handler.gd" id="1_gqtnh"]
+[ext_resource type="PackedScene" uid="uid://xn0p71atsklx" path="res://scenes/Ui/MainMenu.tscn" id="2_k6oul"]
+[ext_resource type="PackedScene" uid="uid://cclvp3sjaknmn" path="res://scenes/map/camelot.tscn" id="3_k6oul"]
+[ext_resource type="PackedScene" uid="uid://ckuynj267ljd6" path="res://scenes/Ui/end_game_sceen.tscn" id="4_endgame"]
+
+[node name="SceneHandler" type="Node" unique_id=647407610]
+script = ExtResource("1_gqtnh")
+main_menu_packed = ExtResource("2_k6oul")
+game_scene_packed = ExtResource("3_k6oul")
+end_game_packed = ExtResource("4_endgame")

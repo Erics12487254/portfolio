@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://kb85t6dagbxg"]
+
+[ext_resource type="PackedScene" uid="uid://bx4bbmnws74ja" path="res://scenes/entities/enemies/enemy.tscn" id="1_2qxvx"]
+
+[node name="Final boss" unique_id=227568315 instance=ExtResource("1_2qxvx")]

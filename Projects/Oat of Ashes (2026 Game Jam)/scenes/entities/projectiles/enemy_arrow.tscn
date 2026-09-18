@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/entities/projectiles/enemy_arrow.gd" id="1_arrow"]
+[ext_resource type="Texture2D" path="res://Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Archer/Arrow/Arrow.png" id="2_arrow"]
+
+[node name="EnemyArrow" type="Node2D"]
+script = ExtResource("1_arrow")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_arrow")

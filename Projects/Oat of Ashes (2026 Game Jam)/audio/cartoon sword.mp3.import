@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bf2cy5q827i78"
+path="res://.godot/imported/cartoon sword.mp3-10eb61c36c42379dbacea10f3e28b513.mp3str"
+
+[deps]
+
+source_file="res://audio/cartoon sword.mp3"
+dest_files=["res://.godot/imported/cartoon sword.mp3-10eb61c36c42379dbacea10f3e28b513.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

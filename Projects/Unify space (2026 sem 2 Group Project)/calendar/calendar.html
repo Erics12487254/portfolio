@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar Test Page</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+  <div style="max-width:360px;margin:30px auto;">
+    <div class="panel-title"><h3>📅 Meeting Calendar</h3></div>
+    <div class="calendar-app">
+      <div class="calendar-header">
+        <button class="small-btn" id="prevMonthBtn">‹</button>
+        <strong id="calendarMonthYear"></strong>
+        <button class="small-btn" id="nextMonthBtn">›</button>
+      </div>
+      <div class="calendar-weekdays">
+        <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+      </div>
+      <div class="calendar-grid" id="calendarGrid"></div>
+      <div class="meeting-form">
+        <input type="text" id="meetingTitle" placeholder="Meeting title">
+        <input type="time" id="meetingTime">
+        <button class="btn btn-primary" id="addMeetingBtn">Add Meeting</button>
+      </div>
+      <h4 id="selectedDateTitle">Meetings</h4>
+      <div id="meetingList"></div>
+    </div>
+    <a href="../index.html" class="btn btn-primary">Back Home</a>
+  </div>
+  <script src="calendar.js"></script>
+</body>
+</html>

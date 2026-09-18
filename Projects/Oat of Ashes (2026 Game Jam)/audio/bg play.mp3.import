@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmuo451kffeco"
+path="res://.godot/imported/bg play.mp3-cae5335a15b58b7605f6dfd115283ca1.mp3str"
+
+[deps]
+
+source_file="res://audio/bg play.mp3"
+dest_files=["res://.godot/imported/bg play.mp3-cae5335a15b58b7605f6dfd115283ca1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

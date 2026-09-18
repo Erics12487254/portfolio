@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://ckuynj267ljd6"]
+
+[ext_resource type="Script" uid="uid://g54jyaxet3lh" path="res://scenes/Ui/end_game_screen.gd" id="1_end_game"]
+[ext_resource type="FontFile" uid="uid://bn7yy1dxeckif" path="res://scenes/font/PirataOne-Regular.ttf" id="1_if132"]
+[ext_resource type="Texture2D" uid="uid://hnot64bh2lm6" path="res://Tiny Swords/UI/Buttons/Button_Blue_3Slides.png" id="2_gmg0h"]
+[ext_resource type="Texture2D" uid="uid://bnhpdsiab47i" path="res://Tiny Swords/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="3_bqu78"]
+[ext_resource type="Texture2D" uid="uid://ch5lim2mqalk0" path="res://Tiny Swords/UI/Buttons/Button_Hover_3Slides.png" id="4_7d05r"]
+[ext_resource type="AudioStream" uid="uid://bm680jiuc0wjh" path="res://audio/oof.mp3" id="6_bqu78"]
+
+[node name="EndGameSceen" type="Control" unique_id=1372293850]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_end_game")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2137127340]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49411765)
+
+[node name="VB" type="VBoxContainer" parent="." unique_id=1572862111]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.18518518
+grow_horizontal = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Result" type="Label" parent="VB" unique_id=2054335097]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_if132")
+theme_override_font_sizes/font_size = 160
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HB" type="HBoxContainer" parent="." unique_id=1838692323]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Replay" type="TextureButton" parent="HB" unique_id=1251508157]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("2_gmg0h")
+texture_pressed = ExtResource("3_bqu78")
+texture_hover = ExtResource("4_7d05r")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="HB/Replay" unique_id=803809818]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_if132")
+theme_override_font_sizes/font_size = 60
+text = "Replay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu" type="TextureButton" parent="HB" unique_id=1836048613]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+texture_normal = ExtResource("2_gmg0h")
+texture_pressed = ExtResource("3_bqu78")
+texture_hover = ExtResource("4_7d05r")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="HB/Main Menu" unique_id=30110484]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_if132")
+theme_override_font_sizes/font_size = 60
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=641169549]
+stream = ExtResource("6_bqu78")
+
+[connection signal="pressed" from="HB/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="HB/Main Menu" to="." method="_on_main_menu_pressed"]

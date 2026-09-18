@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8shjtxyssfru"
+path="res://.godot/imported/8-Bit Powerup Sound Effects (Copyright Free) - Creator Assets.mp3-e8675a703acf0ab0933c2212db626f1c.mp3str"
+
+[deps]
+
+source_file="res://audio/8-Bit Powerup Sound Effects (Copyright Free) - Creator Assets.mp3"
+dest_files=["res://.godot/imported/8-Bit Powerup Sound Effects (Copyright Free) - Creator Assets.mp3-e8675a703acf0ab0933c2212db626f1c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,515 @@
+/* ================= ROLE MODULE ================= */
+
+.role-preview-card {
+  cursor: pointer;
+  transition: 0.22s ease;
+}
+
+.role-preview-card:hover {
+  transform: translateY(-6px);
+  border-color: #4f46e5;
+  box-shadow: 0 18px 45px rgba(79, 70, 229, 0.14);
+}
+
+.role-preview-card small {
+  display: inline-block;
+  margin-top: 12px;
+  color: #4f46e5;
+  font-weight: 800;
+}
+
+.role-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.68);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 260;
+  padding: 20px;
+}
+
+.role-modal.active {
+  display: flex;
+}
+
+.role-modal-card {
+  background: #ffffff;
+  width: min(860px, 96%);
+  border-radius: 30px;
+  padding: 32px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+}
+
+.role-modal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.role-eyebrow {
+  color: #4f46e5;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.role-modal-card h2 {
+  font-size: 34px;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.role-modal-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.role-modal-close {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 14px;
+  background: #f1f5f9;
+  color: #0f172a;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.role-modal-close:hover {
+  background: #e2e8f0;
+}
+
+.role-select-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.role-select-btn {
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 22px;
+  padding: 22px 14px;
+  cursor: pointer;
+  transition: 0.22s ease;
+  text-align: center;
+}
+
+.role-select-btn:hover,
+.role-select-btn.preferred {
+  background: #eef2ff;
+  border-color: #4f46e5;
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.13);
+}
+
+.role-select-btn span {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.role-select-btn strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.role-select-btn small {
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.role-tools-list {
+  display: grid;
+  gap: 6px;
+}
+
+.role-tools-list .tool-btn.active {
+  background: rgba(79, 70, 229, 0.22);
+  color: #ffffff;
+}
+
+.chat-area {
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.role-dashboard-box {
+  margin: 16px 20px;
+  padding: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+}
+
+.role-dashboard-box h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.role-dashboard-box p {
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.role-function-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.role-function-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-align: left;
+}
+
+.role-function-card:hover,
+.role-function-card.active {
+  border-color: #4f46e5;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.10);
+}
+
+.role-function-card strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #0f172a;
+}
+
+.role-function-card span {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.role-tool-output {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 18px;
+  background: #111827;
+  color: white;
+}
+
+.role-tool-output h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.role-tool-output p,
+.role-tool-output li,
+.role-tool-output label {
+  color: #e5e7eb;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.role-tool-output ul {
+  margin-left: 20px;
+}
+
+.role-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.role-mini-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.role-mini-card strong {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.role-tool-output textarea,
+.role-tool-output input,
+.role-tool-output select {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 8px;
+  outline: none;
+}
+
+.role-tool-output textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.role-tool-action {
+  margin-top: 10px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.role-tool-action:hover {
+  background: #4338ca;
+}
+
+.role-result-box {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(34, 197, 94, 0.14);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 14px;
+  color: #dcfce7;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.role-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.role-flow span {
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 10px 12px;
+  border-radius: 14px;
+  color: white;
+  font-weight: 800;
+}
+
+.role-bmc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.role-bmc-grid div {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+.role-phone-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.role-screen {
+  min-height: 110px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .role-select-grid,
+  .role-function-grid,
+  .role-mini-grid,
+  .role-bmc-grid,
+  .role-phone-preview {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= DASHBOARD SCROLL FIX ================= */
+#appScreen {
+  min-height: 100vh;
+  overflow: visible;
+}
+
+.app-layout {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+  align-items: start;
+}
+
+.workspace-sidebar,
+.channel-panel,
+.right-panel {
+  max-height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+
+.chat-area {
+  min-height: 100vh;
+  height: auto;
+  overflow: visible;
+  grid-template-rows: auto auto minmax(360px, auto) auto;
+}
+
+.messages {
+  min-height: 360px;
+  max-height: none;
+  overflow-y: visible;
+}
+
+.role-tool-action.secondary {
+  background: #334155;
+  margin-left: 6px;
+}
+
+.role-tool-action.secondary:hover {
+  background: #1e293b;
+}
+
+.code-result pre {
+  margin-top: 10px;
+  padding: 12px;
+  background: #020617;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+.code-result code {
+  color: #dbeafe;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .workspace-sidebar,
+  .channel-panel,
+  .right-panel {
+    position: static;
+    max-height: none;
+  }
+
+  .messages {
+    overflow-y: auto;
+  }
+}
+
+
+/* ================= ROLE ACTIVITY / CHAT HISTORY ================= */
+.role-history-panel {
+  margin-top: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.role-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.role-history-header h4 {
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.role-history-header p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+}
+
+.role-history-live {
+  background: #eef2ff;
+  color: #4f46e5;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.role-history-list {
+  display: grid;
+  gap: 10px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.role-history-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #4f46e5;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.role-history-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.role-history-top strong {
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.role-history-top span {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.role-history-item p {
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 0 0 7px;
+}
+
+.role-history-item small {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+@media (max-width: 700px) {
+  .role-history-header,
+  .role-history-top {
+    flex-direction: column;
+  }
+}

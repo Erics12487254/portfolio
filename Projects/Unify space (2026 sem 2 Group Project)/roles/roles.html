@@ -1,0 +1,45 @@
+<!-- Role module HTML reference
+This modal is also included inside index.html so it works without extra HTML loading.
+The connected files are:
+- roles/roles.css
+- roles/roles.js
+-->
+
+<div class="role-modal" id="roleModal">
+  <div class="role-modal-card">
+    <div class="role-modal-header">
+      <div>
+        <p class="role-eyebrow">Choose Your Role</p>
+        <h2>Select Your Role</h2>
+        <p id="selectedPlanText">Please choose a role to open the correct dashboard tools.</p>
+      </div>
+      <button class="role-modal-close" id="closeRoleModalBtn" aria-label="Close role selection">×</button>
+    </div>
+
+    <div class="role-select-grid">
+      <button class="role-select-btn" data-role="IT">
+        <span>💻</span>
+        <strong>IT</strong>
+        <small>AI coding, Git push/pull, repository, code editor</small>
+      </button>
+
+      <button class="role-select-btn" data-role="Business">
+        <span>📊</span>
+        <strong>Business</strong>
+        <small>Excel, flowcharts, Business Model Canvas, AI analytics</small>
+      </button>
+
+      <button class="role-select-btn" data-role="Engineering">
+        <span>🏗️</span>
+        <strong>Engineering</strong>
+        <small>AutoCAD support, simulations, technical drawings, project files</small>
+      </button>
+
+      <button class="role-select-btn" data-role="Design">
+        <span>🎨</span>
+        <strong>Design</strong>
+        <small>UI/UX tools, graphics editor, prototypes, asset library</small>
+      </button>
+    </div>
+  </div>
+</div>

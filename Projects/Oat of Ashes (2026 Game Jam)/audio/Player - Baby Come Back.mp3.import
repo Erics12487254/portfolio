@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcqhqcb0wtcn3"
+path="res://.godot/imported/Player - Baby Come Back.mp3-ffcf76b73cb48a5a23ba3efeb909f2e4.mp3str"
+
+[deps]
+
+source_file="res://audio/Player - Baby Come Back.mp3"
+dest_files=["res://.godot/imported/Player - Baby Come Back.mp3-ffcf76b73cb48a5a23ba3efeb909f2e4.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

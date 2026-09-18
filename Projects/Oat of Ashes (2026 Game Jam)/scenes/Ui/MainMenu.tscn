@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://xn0p71atsklx"]
+
+[ext_resource type="Texture2D" uid="uid://hnot64bh2lm6" path="res://Tiny Swords/UI/Buttons/Button_Blue_3Slides.png" id="1_80b6k"]
+[ext_resource type="Script" uid="uid://d07q1eeeuu5fr" path="res://scenes/Ui/main_menu.gd" id="1_k2idy"]
+[ext_resource type="Texture2D" uid="uid://bnhpdsiab47i" path="res://Tiny Swords/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="2_5plkx"]
+[ext_resource type="Texture2D" uid="uid://ch5lim2mqalk0" path="res://Tiny Swords/UI/Buttons/Button_Hover_3Slides.png" id="3_k2idy"]
+[ext_resource type="FontFile" uid="uid://bn7yy1dxeckif" path="res://scenes/font/PirataOne-Regular.ttf" id="4_5plkx"]
+[ext_resource type="AudioStream" uid="uid://dmt6wosyscuqj" path="res://audio/main menu.mp3" id="6_30fje"]
+
+[node name="MainMenu" type="Control" unique_id=360350556]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k2idy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1739580493]
+custom_minimum_size = Vector2(400, 648)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -324.0
+offset_right = 225.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="New Game" type="TextureButton" parent="VBoxContainer" unique_id=1187194498]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+texture_normal = ExtResource("1_80b6k")
+texture_pressed = ExtResource("2_5plkx")
+texture_hover = ExtResource("3_k2idy")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/New Game" unique_id=1208689773]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_5plkx")
+theme_override_font_sizes/font_size = 60
+text = "New Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" type="TextureButton" parent="VBoxContainer" unique_id=1264843717]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+texture_normal = ExtResource("1_80b6k")
+texture_pressed = ExtResource("2_5plkx")
+texture_hover = ExtResource("3_k2idy")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/Settings" unique_id=380286783]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_5plkx")
+theme_override_font_sizes/font_size = 60
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="TextureButton" parent="VBoxContainer" unique_id=476876134]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+texture_normal = ExtResource("1_80b6k")
+texture_pressed = ExtResource("2_5plkx")
+texture_hover = ExtResource("3_k2idy")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/Exit" unique_id=760986540]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_5plkx")
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1635374696]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioStreamPlayer2D" unique_id=712680006]
+stream = ExtResource("6_30fje")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

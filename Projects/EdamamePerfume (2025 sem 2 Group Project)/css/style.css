@@ -1,0 +1,283 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#f3eee7;
+    color:#333;
+}
+
+/* NAVIGATION */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#f8f4ef;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+nav a.active{
+    color:#a88b6a;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#a88b6a;
+}
+
+/* HERO SECTION */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 100px;
+    background:#e8dccd;
+}
+
+.hero-text h1{
+    font-family:'Playfair Display', serif;
+    font-size:56px;
+    margin-bottom:20px;
+    margin-right: 10px;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#333;
+    color:white;
+    cursor:pointer;
+}
+
+.hero img{
+    width:850px;
+}
+
+/* SECTION TITLE */
+.section{
+    padding:70px 100px;
+}
+
+.section h2{
+    font-family:'Playfair Display', serif;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+/* PRODUCTS */
+.moreProjectLabel{
+    margin-left: 30px;
+}
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+.card button{
+    padding:8px 15px;
+    border:1px solid #333;
+    background:none;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#333;
+    color:white;
+}
+
+/* ABOUT */
+.about{
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:750px;
+}
+
+.about-text{
+    max-width:500px;
+}
+
+/* SIGNATURE */
+.signature{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.highlight-box{
+    background:#e8dccd;
+    padding:40px;
+}
+
+.highlight-box button{
+    padding:10px 20px;
+    border:none;
+    background:#333;
+    color:white;
+    cursor:pointer;
+}
+/* JOURNAL */
+.journal{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.journal img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.newsletter{
+    margin-top:20px;
+    display:flex;
+}
+
+.newsletter input{
+    padding:10px;
+    flex:1;
+    border:1px solid #ccc;
+}
+
+.newsletter button{
+    padding:10px 20px;
+    border:none;
+    background:#333;
+    color:white;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#f8f4ef;
+    margin-top:50px;
+}
+
+@media(max-width:900px){
+    .hero, .about, .signature{
+        flex-direction:column;
+        text-align:center;
+    }
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+
+
+
+/* 1. The Grid Container (5 products per row) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* The magic 5-column line */
+  gap: 30px 20px; /* Space between items (Vertical Horizontal) */
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 2. The Flip Card Core Logic */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 320px; /* Adjust height to fit your perfume bottles */
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.product-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 3. Front and Back Styling */
+.flip-card-front {
+  background-color: #fcfcfc;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps images from looking stretched */
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, #ffeadb 30%, #ffc4ab 88%);
+  color: #555;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ffccbc;
+}
+
+/* 4. Details & Buttons */
+.product-name { margin-top: 15px; margin-left: 10px; font-weight: bold; font-family: 'Playfair Display', serif; }
+.price { color: #888; margin-bottom: 10px; margin-left: 10px; }
+.add-btn {
+  padding: 8px 20px;
+  border: 1px solid #333;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 0.9em;
+  display: block;
+  margin: 10px auto;
+}
+.add-btn:hover { background: #333; color: white; }
